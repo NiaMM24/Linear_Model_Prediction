@@ -25,5 +25,30 @@ basiccNN<- ggplot(data,aes (y=SIMS,x=ARM))
 basiccNN +geom_point() +ggtitle("SIMS vs ARM")
 ```
 
-The relationship is a positive relationship, as the is going up to the right.
+We have a scatterplot for SIMS vs ARM and it seems that the plot is going up to the right.
+
+### Numerical Results
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+### Inferential Results 
+```{r}
+model1<-lm(SIMS~ARM,data=data)
+summary.lm(model1)
+```
+
+### Target DataFrame
+```{r}
+target<-data.frame(ARM=90,GRIP=90)
+```
+
+```{r}
+predict(model1,target,interval=c("prediction"))
+```
+
+```{r}
+predict(model1,target,interval=c("confidence"))
+```
+
 
