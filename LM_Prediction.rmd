@@ -25,5 +25,5 @@ basiccNN<- ggplot(data,aes (y=SIMS,x=ARM))
 basiccNN +geom_point() +ggtitle("SIMS vs ARM")
 ```
 
-
+The relationship is a positive relationship, as the is going up to the right.
 
