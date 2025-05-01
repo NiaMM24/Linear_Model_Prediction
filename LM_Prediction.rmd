@@ -86,6 +86,12 @@ summary.lm(model2)
 
 The adjusted R square for SIMS vs ARM is bigger than SIMS vs GRIP.
 
+```{r}
+gripmod <- lm(SIMS~GRIP,data=data)
+plot(SIMS~GRIP,data=data)
+abline(gripmod)
+summary.lm(gripmod)
+```
 
 
 
